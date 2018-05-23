@@ -1,0 +1,171 @@
+/* ==========================================================================
+   Responsive Setup
+   ========================================================================== */
+
+/* Globally defne box-sizing */
+* {
+    @include box-sizing(border-box);
+}
+
+/* Define viewport */
+@-webkit-viewport { width: device-width; zoom: 1; max-zoom: 1; }
+@-moz-viewport { width: device-width; zoom: 1; max-zoom: 1; }
+@-ms-viewport { width: device-width; zoom: 1; max-zoom: 1; }
+@-o-viewport { width: device-width; zoom: 1; max-zoom: 1; }
+@viewport { width: device-width; zoom: 1; max-zoom: 1; }
+
+
+/* ==========================================================================
+   Fonts
+   ========================================================================== */
+
+/* Franklin Gothic */
+
+@font-face {
+    font-family: 'Franklin Gothic';
+    src: font-url('itcfranklingothicstd-book-webfont.eot');
+    src: font-url('itcfranklingothicstd-book-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('itcfranklingothicstd-book-webfont.woff') format('woff'),
+         font-url('itcfranklingothicstd-book-webfont.ttf') format('truetype'),
+         font-url('itcfranklingothicstd-book-webfont.svg#Franklin Gothic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'Franklin Gothic';
+    src: font-url('itcfranklingothicstd-bookit-webfont.eot');
+    src: font-url('itcfranklingothicstd-bookit-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('itcfranklingothicstd-bookit-webfont.woff') format('woff'),
+         font-url('itcfranklingothicstd-bookit-webfont.ttf') format('truetype'),
+         font-url('itcfranklingothicstd-bookit-webfont.svg#Franklin Gothic') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+    font-family: 'Franklin Gothic';
+    src: font-url('itcfranklingothicstd-demi-webfont.eot');
+    src: font-url('itcfranklingothicstd-demi-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('itcfranklingothicstd-demi-webfont.woff') format('woff'),
+         font-url('itcfranklingothicstd-demi-webfont.ttf') format('truetype'),
+         font-url('itcfranklingothicstd-demi-webfont.svg#Franklin Gothic') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'Franklin Gothic';
+    src: font-url('itcfranklingothicstd-demiit-webfont.eot');
+    src: font-url('itcfranklingothicstd-demiit-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('itcfranklingothicstd-demiit-webfont.woff') format('woff'),
+         font-url('itcfranklingothicstd-demiit-webfont.ttf') format('truetype'),
+         font-url('itcfranklingothicstd-demiit-webfont.svg#Franklin Gothic') format('svg');
+	font-weight: bold;
+	font-style: italic;
+}
+
+/* Minion */
+
+@font-face {
+    font-family: 'Minion';
+    src: font-url('minionpro-regular-webfont.eot');
+    src: font-url('minionpro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('minionpro-regular-webfont.woff') format('woff'),
+         font-url('minionpro-regular-webfont.ttf') format('truetype'),
+         font-url('minionpro-regular-webfont.svg#Minion') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Minion';
+    src: font-url('minionpro-it-webfont.eot');
+    src: font-url('minionpro-it-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('minionpro-it-webfont.woff') format('woff'),
+         font-url('minionpro-it-webfont.ttf') format('truetype'),
+         font-url('minionpro-it-webfont.svg#Minion') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Minion';
+    src: font-url('minionpro-bold-webfont.eot');
+    src: font-url('minionpro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('minionpro-bold-webfont.woff') format('woff'),
+         font-url('minionpro-bold-webfont.ttf') format('truetype'),
+         font-url('minionpro-bold-webfont.svg#Minion') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Minion';
+    src: font-url('minionpro-boldit-webfont.eot');
+    src: font-url('minionpro-boldit-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('minionpro-boldit-webfont.woff') format('woff'),
+         font-url('minionpro-boldit-webfont.ttf') format('truetype'),
+         font-url('minionpro-boldit-webfont.svg#Minion') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Icons */
+
+@font-face {
+	font-family: 'Icons';
+	src: font-url('royall-icons.eot');
+	src: font-url('royall-icons.eot?#iefix') format('embedded-opentype'),
+		font-url('royall-icons.woff') format('woff'),
+		font-url('royall-icons.ttf') format('truetype'),
+		font-url('royall-icons.svg#royall-icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* ==========================================================================
+   Variables & Mixins
+   ========================================================================== */
+
+/******** Fonts ************************/
+$headlineFonts: 'Minion', 'Bodoni', 'Georgia', serif;
+$bodyFonts: 'Franklin Gothic', 'Arial', sans-serif;
+
+
+/******** Colors ************************/
+$blue: #002f65;
+$medblue: #00234b;
+$darkblue: #001935;
+$redorange: #ef4732;
+$tan: #ece7df;
+$black: #434343;
+
+$brightblue: saturate(lighten($blue, 5%), 5%);
+
+@mixin stripedBG($baseColor, $color1, $color2, $size) {
+    @include background(linear-gradient(-45deg, $color2 0%, $color2 25%, $color1 25%, $color1 50%, $color2 50%, $color2 75%, $color1 75%));
+    background-color: $baseColor;
+    background: {
+        size: $size $size;
+        repeat: repeat;
+    };
+}
+
+@mixin mres($density) {
+  @media (-webkit-min-device-pixel-ratio: $density),
+         (min-resolution: $density + "dppx") {
+    @content
+  }
+}
+
+@mixin opt-bg-image($img: "default", $ext: "png", $svg: false, $hires: "-2x", $hiresmin: "1.1"){
+    background: {
+        image: image-url($img + "." + $ext);
+        size: contain;
+        repeat: no-repeat;
+    };
+    @include mres($hiresmin) {
+        background-image: image-url($img + $hires + "." + $ext);
+    };
+    @if ($svg == true) {
+        .svg & {
+            background-image: image-url($img + ".svg")
+        }
+    }
+}
+

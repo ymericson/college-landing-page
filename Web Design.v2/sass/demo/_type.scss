@@ -1,0 +1,144 @@
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+   
+body {
+	font-family: $bodyFonts;
+	line-height: 1.4em;
+	color: $black;
+	-webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, p, ul, ol, blockquote, small {
+	&:first-child {
+		margin-top: 0;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: $headlineFonts;
+	line-height: 1.1em;
+	font-weight: normal;
+	margin: 1.25em 0 0.5em 0;
+}
+
+h1 {
+	font-size: 1.875rem; // 30px
+	color: $redorange;
+	@media (min-width: #{$small}) {
+		font-size: 2.5rem; // 40px
+	}
+	@media (min-width: #{$medium}) {
+		font-size: 3rem; // 48px
+	}
+}
+
+h2 {
+	font-size: 1.6875rem; // 27px
+	color: $blue;
+	@media (min-width: #{$small}) {
+		font-size: 2.125rem; // 34px
+	}
+	@media (min-width: #{$medium}) {
+		font-size: 2.5rem; // 40px
+	}
+}
+
+h3 {
+	font-size: 1.5625rem; // 25px
+	color: $redorange;
+	@media (min-width: #{$small}) {
+		font-size: 1.6875rem; // 27px
+	}
+	@media (min-width: #{$medium}) {
+		font-size: 1.875rem; // 30px
+	}
+}
+
+h4 {
+	font-size: 1.25rem; // 20px
+	color: $blue;
+	@media (min-width: #{$small}) {
+		font-size: 1.5rem; // 24px
+	}
+}
+
+h5 {
+	font-size: 1.125rem; // 18px
+	margin-bottom: 0.85em;
+	color: $blue;
+	@media (min-width: #{$small}) {
+		font-size: 1.25rem; // 20px
+	}
+}
+
+p, ul, ol, blockquote, address {
+	font-size: 1rem; // 16px
+	line-height: 1.4em;
+	margin: 1em 0;
+	font-weight: normal;
+	font-style: normal;
+	@media (min-width: #{$medium}) {
+		font-size: 1.125rem; // 18px
+	}
+
+	small {
+		display: inline;
+	}
+}
+
+small {
+	display: block;
+	font-size: 0.75rem;
+	line-height: 1.4em;
+	margin: 1em 0;
+	font-style: italic;
+}
+
+ul {
+	list-style-type: circle;
+}
+
+ul, ol {
+	padding: 0 0 0 1.5em;
+	li {
+		margin: 0 0 0.35em 0;
+		padding: 0;
+		ul, ol {
+			font-size: 0.9em;
+			margin: 0.5em 0;
+		}
+	}
+}
+
+a {
+	color: $brightblue;
+	text-decoration: underline;
+	@include transition(all 0.2s ease-in-out);
+	cursor: pointer;
+	&:hover {
+		color: $redorange;
+	}
+}
+
+.blue {
+	color: $blue;
+}
+.redorange {
+	color: $redorange;
+}
+
+::-moz-selection {
+    background: rgba($redorange, 0.75);
+    text-shadow: none;
+    color: #fff;
+}
+
+::selection {
+    background: rgba($redorange, 0.75);
+    text-shadow: none;
+    color: #fff;
+}

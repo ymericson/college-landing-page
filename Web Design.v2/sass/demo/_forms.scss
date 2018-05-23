@@ -1,0 +1,21 @@
+label {
+	font-weight: bold;
+	font-size: 1rem;
+	display: block;
+}
+
+input, textarea, select {
+	width: 100%;
+	background: rgba(#fff, 0.2);
+	border: 1px solid transparent;
+	font-family: $bodyFonts;
+	font-size: 1.125rem;
+	color: #fff;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	padding: 0.375em 0.5em;
+	@include transition(all 0.3s ease-in-out);
+	&:focus {
+		border-color: #fff;
+	}
+}

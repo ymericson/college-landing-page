@@ -1,0 +1,86 @@
+@mixin buttonBase() {
+	width: 100%;
+	@include stripedBG($redorange, rgba(#fff, 0), rgba(#fff, 0.1), 4rem);
+	border: 1px solid lighten($redorange, 15%);
+	border-bottom-color: desaturate(darken($redorange, 25%), 15%);
+	border-right-color: desaturate(darken($redorange, 25%), 15%);
+	@include border-radius(0.375em);
+	padding: 0.875em 1em;
+	font-family: $bodyFonts;
+	font-size: 1.125rem;
+	line-height: 1.125em;
+	color: #fff;
+	text-align: center;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: 1px 1px 0 desaturate(darken($redorange, 15%), 15%);
+	-webkit-font-smoothing: antialiased;
+	@include transition(all 0.3s ease-in-out);
+	&:hover {
+		border-top-color: $redorange;
+		border-left-color: $redorange;
+		background-color: desaturate(darken($redorange, 10%), 10%);
+	}
+	@media (min-width: #{$tiny}) {
+		display: inline-block;
+		width: 50%;
+	}
+	@media (min-width: #{$small}) {
+		width: auto;
+	}
+}
+
+.type_event_button {
+	@media (min-width: #{$tiny}) {
+		text-align: right;
+	}
+	a, button {
+		@include buttonBase;
+	}
+}
+
+button, input[type=submit], a.button {
+	@include buttonBase;
+}
+
+@mixin calloutLink() {
+	display: block;
+	background: $redorange;
+	@include border-radius(5em);
+	padding: 0.75em 3.125em 0.75em 1.5em;
+	position: relative;
+	font-size: 1rem;
+	line-height: 1.125em;
+	color: #fff;
+	text-align: left;
+	font-weight: bold;
+	text-decoration: none;
+	&:after {
+		content: "\e600";
+		font-family: "Icons";
+		display: block;
+		font-size: 0.875em;
+		width: 1.75em;
+		height: 1.75em;
+		@include box-sizing(border-box);
+		padding-left: 0.125em;
+		@include border-radius(50%);
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0.75em;
+		margin: auto;
+		background: #fff;
+		color: $redorange;
+		line-height: 1.75em;
+		text-align: center;
+	}
+	&:hover {
+		color: #fff;
+		background-color: mix(lighten($redorange, 7.5%), yellow, 97.5%);
+	}
+}
+
+.callout-link {
+	@include calloutLink();
+}
