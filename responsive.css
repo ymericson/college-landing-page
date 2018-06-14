@@ -1,0 +1,22 @@
+@media screen and (max-width: 700px) {
+	
+	
+	.gallery-item {
+		display:block;
+		width: 90%;	
+	}
+
+}
+
+
+
+
+@media screen and (max-width: 450px) {
+
+	.gallery-item img {
+	display:none;
+	}
+
+	
+
+}
